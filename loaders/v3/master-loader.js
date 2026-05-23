@@ -1,9 +1,9 @@
 "use strict";
 var scripts = document.getElementsByTagName("script"),
     scriptUrl = scripts[scripts.length - 1].src,
-    root = scriptUrl.split("master-loader.js")[0],
+    root = scriptUrl.split("https://cdn.jsdelivr.net/gh/Alexguy7894/fictional-runnotary-phone@main/loaders/v3/master-loader.js")[0],
     loaders = {
-        unity: "unity.js",
+        unity: "https://cdn.jsdelivr.net/gh/Alexguy7894/fictional-runnotary-phone@main/loaders/v3/unity.js",
         "unity-beta": "unity-beta.js",
         "unity-2020": "unity-2020.js"
     };
