@@ -1,9 +1,9 @@
 "use strict";
 var scripts = document.getElementsByTagName("script"),
     scriptUrl = scripts[scripts.length - 1].src,
-    root = scriptUrl.split("https://cdn.jsdelivr.net/gh/Alexguy7894/fictional-runnotary-phone@main/loaders/v3/master-loader.js")[0],
+    root = scriptUrl.split("master-loader.js")[0],
     loaders = {
-        unity: "https://cdn.jsdelivr.net/gh/Alexguy7894/fictional-runnotary-phone@main/loaders/v3/unity.js",
+        unity: "unity.js",
         "unity-beta": "unity-beta.js",
         "unity-2020": "unity-2020.js"
     };
@@ -16,14 +16,14 @@ if (!window.config.unityWebglLoaderUrl) {
         minor = versionSplit[1];
     switch (year) {
         case "2019":
-            window.config.unityWebglLoaderUrl = 1 === minor ? "./loaders/v2/unity/static/UnityLoader.2019.1.js" : "https://cdn.jsdelivr.net/gh/Alexguy7894/fictional-runnotary-phone@main/loaders/v2/unity/static/UnityLoader.2019.2.js";
+            window.config.unityWebglLoaderUrl = 1 === minor ? "./loaders/v2/unity/static/UnityLoader.2019.1.js" : "./loaders/v2/unity/static/UnityLoader.2019.2.js";
             break;
         default:
             window.config.unityWebglLoaderUrl = "./loaders/v2/unity/static/UnityLoader.js"
     }
 }
 var sdkScript = document.createElement("script");
-sdkScript.src = "https://cdn.jsdelivr.net/gh/Alexguy7894/fictional-runnotary-phone@main/poki-sdk.js", sdkScript.onload = function() {
+sdkScript.src = "./poki-sdk.js", sdkScript.onload = function() {
     var i = document.createElement("script");
     i.src = root + loader, document.body.appendChild(i)
 }, document.body.appendChild(sdkScript);
